@@ -13,72 +13,21 @@ function init()
     var carros = $.parseJSON(cars);
    $.each(carros, function() 
    {
-      	var html= '<li><input type="radio" name="gender" value="male" checked>'+
-      		'<img src="src/img/auto.jpg" class="vehiculo" ><small>'+this['nombre']+'</small></li>';
+      	var html= '<li class="lis"><input type="radio" name="gender" class="radio" value="male" checked>'+
+      		'<img src='+this['image']+' class="vehiculo" ><small>'+this['nombre']+'</small> '+
+      		'<span class="litros" >'+this['consumo']+'</span></li>';
 
     carList.append(html);
   	
   });
- }
-function asignaEventoClick()
-{
-	var lis=$('.li');
-	$.each(lis, function() {$(this).on('click',onLinkClick)});
+		$('.lis').on('click',onLinkClick);
+
 }
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
-function onLinkClick(evt)
+function onLinkClick()
 {
-	select=true;
-	var srcCar= $(evt.currentTarget).find('.logo').attr('src');
-	var type= $(evt.currentTarget).find('.type').text();
-	var name= $(evt.currentTarget).find('.name').text();
-	var seats = $(evt.currentTarget).find('.seats').text();
-	localStorage.setItem('srcImgCar',srcCar);
-	localStorage.setItem('nameCar',name);
-	localStorage.setItem('typeCar',type);
-	localStorage.setItem('seat',seats);
+	var consumo= $(this).find('.litros').text();
+	localStorage.setItem('consumo',consumo);
 }
-/***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
-function setPickup()
-{
-	var dirInput=$('#pac-input').val();
-	if(dirInput.length>0 && select)
-	{
-		swal({
-		    title: "¡Se selecciono exitosamente!",
-		    text: "Vehiculo destino: " + localStorage.getItem('nameCar').toUpperCase()+",  Destino: "+localStorage.getItem('direccion'),
-		    imageUrl: "img/goods.png"
-		},function(isConfirm){
-	      	if (isConfirm)
-	      	{
-	        	setTimeout(function(){window.location="app_1.html";}, 50);
-	        } 
-		});
-	}
-	else
-	{
-		if(!select)
-		{
-			swal({
-			  title: "¡Por favor, selecciona un vehículo!",
-			  text: "No seleccionaste ningun vehiculo",
-			  imageUrl: "img/bads.png"
-			});
-		}
-		else
-		{
-			swal({ 
-		  		title: "¡Por favor, selecciona un Destino!",
-		  		text: "No seleccionaste ningun destino",
-		  		imageUrl: "img/bads.png"
-			});	
-		}
-	}
-
-}
-/*****************************************FIN***************************************************/
-
-
-
 
    
