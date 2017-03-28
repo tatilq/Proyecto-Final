@@ -30,10 +30,6 @@
   position: absolute;
   top: 10%; }
 
-header {
-  background-color: white;
-  outline: 1px solid  red; }
-
 #info .carro {
   background-color: white; }
 

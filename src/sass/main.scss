@@ -1,20 +1,19 @@
 $total:100%;
 $cien:100px;
-$colorIcono:rgb(255,142,72);
+$color:rgb(255,142,72);
+$blanco:rgb(255,255,255);
 .cuerpo
 {
-	
 	position:relative;
 }
 .form-group
 {
 	padding:10px;
-	background-color:white;
-	
+	background-color:$blanco;
 }
 .boton
 {
-	background-color:$colorIcono;
+	background-color: $color;
 	width:100%;
 }
 #btn-select
@@ -28,13 +27,12 @@ $colorIcono:rgb(255,142,72);
 #logo
 {
 	width:$total - 20%;
-
 }
 #exclama
 {
-	color:$colorIcono;
-font-size:70px;
-margin :0 auto;
+	color:$color;
+	font-size:70px;
+	margin :0 auto;
 }
 .vehiculo
 {
@@ -46,20 +44,17 @@ margin :0 auto;
 	display:none;
 }
 
-#map{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top:10%;
-}
-header
+#map
 {
-	background-color:white;
-	outline:1px solid  red;
+	height: $total;
+	width: $total;
+	position: absolute;
+	top:$total / 10;
 }
+
 #info .carro{
 	
-	background-color:white;
+	background-color:$blanco;
 
 }
 #cant
@@ -71,16 +66,16 @@ header
 	border:none;
 	height:30px;
 	border-radius:3px;
-	background-color:$colorIcono;
+	background-color:$color;
 	width:100%;
 
 }
 .informacion
 {
 	padding:10px;
-	background-color:white;
+	background-color:$blanco;
 }
 .informacion  h4
 {
-	color:$colorIcono;
+	color:$color;
 }
