@@ -74,7 +74,7 @@ function validarEnviar()
  	var pasajero=localStorage.getItem('pasajero');
  	var ruta=localStorage.getItem('ruta');
  
- 	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));  	 
+ 	var costo=(parseInt((((kmDestino-kmOrigen)*kmLitros))/pasajero));  	 
 	swal({
     title: "¡El costo es ! "+costo,
     imageUrl: ruta
