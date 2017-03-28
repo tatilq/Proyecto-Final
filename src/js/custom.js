@@ -1,6 +1,8 @@
-/******FUNCION PARA CALCULAR EL MONTO DEL VIAJE*******/
-function compartirCarro()
-{
-	var kmLitros=localStorage.getItem('consumo');
-}
-	//$('#code').text(localStorage.getItem('codigo'));
+$('#tooltip').hide();
+$("#exclama").mouseover(function(){
+    		$('#tooltip').show();
+  	});
+ 
+	$("#exclama").mouseout(function(){
+    		a$('#tooltip').hide();
+ });

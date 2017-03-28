@@ -1,24 +1,28 @@
 var gulp = require('gulp');
-var concat = require('gulp-concat');
+var concat = require('concat');
 var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+
 var notify = require('gulp-notify');
-var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
+
 var minifyCSS = require('gulp-minify-css');
+/*
 
+gulp.task('script', function(){
+	concat(['./src/js/ciudadesJSON.js', './src/js/vehiculosJSON.js','./src/js/map_1.js','./src/js/custom.js'], 'script.js');
 
-gulp.task('script', function(cb){
-	// tarea script
+	return gulp.src('./src/js/*.css')
+	.pipe(concat(gulp.dest("./dist")));
 });
 
 gulp.task('style', function() {
-	// tarea style
+	concat(['./src/css/style.css'], 'style.css');
+	return gulp.src('./src/js/*.css')
+	.pipe(concat(gulp.dest("./dist")));
 });
-
+*/
 gulp.task('images', function() {
-	// tarea images
+	concat(['./src/css/img'], 'img');
+	return gulp.src('./src/js/*.css')
+	.pipe(concat(gulp.dest("./dist")));
 });
 
-
-gulp.task('default', ['images', 'style', 'script']);

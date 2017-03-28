@@ -2,10 +2,12 @@ $total:100%;
 $cien:100px;
 $color:rgb(255,142,72);
 $blanco:rgb(255,255,255);
+/******ESTILOS CUERPO****/
 .cuerpo
 {
 	position:relative;
 }
+/******CLASES GENERALES****/
 .form-group
 {
 	padding:10px;
@@ -34,6 +36,7 @@ $blanco:rgb(255,255,255);
 	font-size:70px;
 	margin :0 auto;
 }
+/******SECCION VEHICULO****/
 .vehiculo
 {
 	width:$cien / 2;
@@ -43,7 +46,7 @@ $blanco:rgb(255,255,255);
 {
 	display:none;
 }
-
+/******SECCION MAPA****/
 #map
 {
 	height: $total;
@@ -51,7 +54,7 @@ $blanco:rgb(255,255,255);
 	position: absolute;
 	top:$total / 10;
 }
-
+/******SECCION INFORMAION****/
 #info .carro{
 	
 	background-color:$blanco;
@@ -78,4 +81,10 @@ $blanco:rgb(255,255,255);
 .informacion  h4
 {
 	color:$color;
+}
+
+#tooltip
+{
+	float: right;
+	
 }

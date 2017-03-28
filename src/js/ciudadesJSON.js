@@ -75,11 +75,30 @@ function validarEnviar()
  	var ruta=localStorage.getItem('ruta');
  
  	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));
-	
-    	 swal({
+	if(costo>0)
+	{   	 
+		swal({
 	    title: "¡El costo es ! "+costo,
 	    imageUrl: ruta
 		});
+	}
+	else
+	{   	 
+		swal({
+	    title: "¡Faltan Datos",
+	    imageUrl: "src/img/bads.png"
+		});
+	}
+   
    
    
  }
+
+ $('#tooltip').hide();
+$("#exclama").mouseover(function(){
+    		$('#tooltip').show();
+  	});
+ 
+	$("#exclama").mouseout(function(){
+    		a$('#tooltip').hide();
+ });
