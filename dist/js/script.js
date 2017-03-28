@@ -74,34 +74,14 @@ function validarEnviar()
  	var pasajero=localStorage.getItem('pasajero');
  	var ruta=localStorage.getItem('ruta');
  
- 	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));
-	if(costo>0)
-	{   	 
-		swal({
-	    title: "¡El costo es ! "+costo,
-	    imageUrl: ruta
-		});
-	}
-	else
-	{   	 
-		swal({
-	    title: "¡Faltan Datos",
-	    imageUrl: "src/img/bads.png"
-		});
-	}
-   
-   
-   
+ 	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));  	 
+	swal({
+    title: "¡El costo es ! "+costo,
+    imageUrl: ruta
+	});
+ 
  }
 
- $('#tooltip').hide();
-$("#exclama").mouseover(function(){
-    		$('#tooltip').show();
-  	});
- 
-	$("#exclama").mouseout(function(){
-    		a$('#tooltip').hide();
- });
 
 var cars = '[{"nombre": "Auto","max":"5", "consumo":"12", "image":"src/img/auto.jpg"},'+
 	'{"nombre": "Moto","max":"2", "consumo":"21", "image":"src/img/moto.jpg"},'+
