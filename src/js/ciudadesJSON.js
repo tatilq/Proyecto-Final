@@ -11,6 +11,8 @@ $(document).ready(init);
 function init()
 {	
 	$('#btn-select').click(validarCiudades);
+	$('#btn-enviar').click(validarEnviar);
+	
 	$('#info').hide();
  	var origenList = $('#origen');
  	var destinoList = $('#destino');
@@ -26,27 +28,20 @@ function init()
 		destinoList.append(html);	
    });
 
-  $('.origenes').on('click',onClickOrigen);
-
-  $('.destinos').on('click',onClickDestino);	
+  $('#origen').on('change',onClickOrigen);
+  $('#destino').on('change',onClickDestino);	
 }
 
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
 function onClickOrigen()
 {
-	alert("hola");
-
-	/*var origen= $(this).text();
-	var litrosDestino=$(this).attr('value');
-	localStorage.setItem('origen',origen);
-	localStorage.setItem('litrosDestino',litrosDestino);*/
+	var litrosDestino= $(this).val();
+	localStorage.setItem('origen',litrosDestino);
 }
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
 function onClickDestino()
 {
-	var destino= $(this).text();
-	var litrosDestino= $(this).attr('value');
-	localStorage.setItem('destino',destino);
+	var litrosDestino= $(this).val();
 	localStorage.setItem('litrosDestino',litrosDestino);
 }
 /***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
@@ -71,3 +66,28 @@ function validarCiudades()
 
 }
  
+ function validarEnviar()
+ {
+ 	var kmLitros=localStorage.getItem('consumo');
+ 	var litrosDestino=localStorage.getItem('litrosDestino');
+ 	var origen=localStorage.getItem('origen');
+ 	console.log(kmLitros);
+ 	console.log(litrosDestino);
+ 	console.log(origen);
+ }
+
+    /*if ($('#origen').val() != '' && $('#destino').val() != '') 
+    {
+    	swal({
+	    title: "¡Se selecciono exitosamente!",
+	    imageUrl: "src/img/goods.png"
+		});
+       $('#info').show();
+    } 
+    else {
+    	 swal({
+	    title: "¡Debes de seleccionar una ciudad!",
+	    imageUrl: "src/img/bads.png"
+		});
+    }*/
+ }

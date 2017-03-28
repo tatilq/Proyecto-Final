@@ -14,8 +14,8 @@ function init()
    $.each(carros, function() 
    {
       	var html= '<li class="lis"><input type="radio" name="gender" class="radio" value="male" checked>'+
-      		'<img src='+this['image']+' class="vehiculo" ><small>'+this['nombre']+'</small> '+
-      		'<span class="litros" >'+this['consumo']+'</span></li>';
+      		'<img src='+this['image']+' class="vehiculo" ><small>'+this['nombre']+'</small><span> Maximo </span><span class="pasajero">'+this['max']+'</span> '+
+      		'<span class="litros" style="display:none;">'+this['consumo']+'</span></li>';
 
     carList.append(html);
   	
@@ -27,7 +27,10 @@ function init()
 function onLinkClick()
 {
 	var consumo= $(this).find('.litros').text();
+	var pasajero=$(this).find('.pasajero').text();
 	localStorage.setItem('consumo',consumo);
+	localStorage.setItem('pasajero',pasajero);
+	
 }
 
    

@@ -5,7 +5,7 @@
   padding: 10px;
   background-color: white; }
 
-#btn-select {
+.boton, #btn-select, #btn-enviar {
   background-color: #ff8e48;
   width: 100%; }
 

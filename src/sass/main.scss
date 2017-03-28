@@ -12,10 +12,18 @@ $colorIcono:rgb(255,142,72);
 	background-color:white;
 	
 }
-#btn-select
+.boton
 {
 	background-color:$colorIcono;
 	width:100%;
+}
+#btn-select
+{
+	@extend .boton;
+}
+#btn-enviar
+{
+	@extend .boton;
 }
 #logo
 {
