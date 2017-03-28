@@ -15,42 +15,53 @@ function init()
     var ciudad = $.parseJSON(ciudades);
    $.each(ciudad, function() 
    {
-      	var html= '<option class="opcionOrigen">'+this['nombre']+ ' <span class="distancia">'+this['distance']+' km'+'</span></option>';
+      	var html= '<option class="opcionOrigen">'+this['nombre']+ ' <span class="distanciaO">'+this['distance']+'</span></option>';
 
     origenList.append(html);
   	
   });
    $.each(ciudad, function() 
    {
-      	var html= '<option class="opcionDestino">'+this['nombre']+'  <span class="distancia">'+this['distance']+' km'+'</span></option>';
+      	var html= '<option class="opcionDestino">'+this['nombre']+'  <span class="distanciaD">'+this['distance']+'</span></option>';
 
     destinoList.append(html);
   	
   });
 
-   asignaEventoClick();
+   asignaEventoClickOrigen();
   	
 }
-function asignaEventoClick()
+function asignaEventoClickOrigen()
 {
-	var opcionOrigen=$('.opcionOrigen');
-	$.each(opcionOrigen, function() {$(this).on('click',onLinkClickOrigen)});
+	var opcionOrigen=$('.distanciaO');
+	//console.log(opcionOrigen);
+	for(var i in opcionOrigen)
+	{
+		$(this).on('click',onLinkClickOrigen);
+	}
+	//$.each(opcionOrigen, function() {$(this).on('click',onLinkClickOrigen)});
+}
+/*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
+function onLinkClickOrigen(evt)
+{
+	/*var srcCar= $(evt.currentTarget).find('.logo').attr('src');*/
+	var origenDistancia= $(this).text();
+	localStorage.setItem('origenKm',origenDistancia);
+	console.log(origenDistancia);
 
+}
+function asignaEventoClickDestino()
+{
 	var opcionDestino=$('.opcionDestino');
 	$.each(opcionDestino, function() {$(this).on('click',onLinkClickDestino)});
 }
+
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
-function onLinkClick(evt)
+function onLinkClickDestino(evt)
 {
-	select=true;
 	/*var srcCar= $(evt.currentTarget).find('.logo').attr('src');*/
-	var type= $(evt.currentTarget).find('.type').text();
-	var name= $(evt.currentTarget).find('.name').text();
-	var seats = $(evt.currentTarget).find('.seats').text();
-	localStorage.setItem('srcImgCar',srcCar);
-
-
-
+	var destinoDistancia= $(this).find('.span').text();
+	localStorage.setItem('destinoKm',destinoDistancia);
 
 }
 /***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
