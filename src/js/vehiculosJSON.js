@@ -19,9 +19,7 @@ function init()
     carList.append(html);
   	
   });
-  	/****LLAMA A LA FUNCION QUE ASIGNA EL EVENTO CLICK***/
-   	//asignaEventoClick();
-}
+ }
 function asignaEventoClick()
 {
 	var lis=$('.li');

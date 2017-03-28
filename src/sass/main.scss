@@ -3,7 +3,7 @@ $cien:100px;
 $colorIcono:rgb(255,142,72);
 .cuerpo
 {
-	outline:1px solid red;
+	
 	position:relative;
 }
 .form-group
@@ -25,7 +25,8 @@ $colorIcono:rgb(255,142,72);
 #exclama
 {
 	color:$colorIcono;
-font-size:80px;
+font-size:70px;
+margin :0 auto;
 }
 .vehiculo
 {
@@ -41,8 +42,7 @@ font-size:80px;
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	background-repeat:no-repeat;
-	clear: both;
+	top:10%;
 }
 header
 {
@@ -66,4 +66,13 @@ header
 	background-color:$colorIcono;
 	width:100%;
 
+}
+.informacion
+{
+	padding:10px;
+	background-color:white;
+}
+.informacion  h4
+{
+	color:$colorIcono;
 }

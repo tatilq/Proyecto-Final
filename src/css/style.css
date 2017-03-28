@@ -1,5 +1,4 @@
 .cuerpo {
-  outline: 1px solid red;
   position: relative; }
 
 .form-group {
@@ -15,7 +14,8 @@
 
 #exclama {
   color: #ff8e48;
-  font-size: 80px; }
+  font-size: 70px;
+  margin: 0 auto; }
 
 .vehiculo {
   width: 50px;
@@ -28,8 +28,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background-repeat: no-repeat;
-  clear: both; }
+  top: 10%; }
 
 header {
   background-color: white;
@@ -47,5 +46,12 @@ header {
   border-radius: 3px;
   background-color: #ff8e48;
   width: 100%; }
+
+.informacion {
+  padding: 10px;
+  background-color: white; }
+
+.informacion h4 {
+  color: #ff8e48; }
 
 /*# sourceMappingURL=style.css.map */
