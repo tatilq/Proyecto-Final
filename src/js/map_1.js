@@ -43,26 +43,8 @@ function mapa(position)
     position: new google.maps.LatLng(latitud,longitud),
     map: map,
     title:"¡ Aqui estoy !",
-    icon: "img/persona.png"
+    icon: ""
       });
-  var marker1 = new google.maps.Marker({
-      position: new google.maps.LatLng(latitud+0.001, longitud),
-      map: map,
-      title:"auto1",
-      icon: "img/car.png"
-    });
-  var marker2 = new google.maps.Marker({
-      position: new google.maps.LatLng(latitud+0.004, longitud),
-      map: map,
-      title:"auto2",
-      icon: "img/car.png"
-    });
-  var marker3 = new google.maps.Marker({
-      position: new google.maps.LatLng(latitud, longitud+0.004),
-      map: map,
-      title:"auto3",
-      icon: "img/car.png"
-    });
 
   geocodeLatLng(geocoder, currentMarker.position,'dirActual');
 };

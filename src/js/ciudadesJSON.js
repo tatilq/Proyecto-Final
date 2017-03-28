@@ -10,6 +10,7 @@ $(document).ready(init);
 //--------------------------------------FUNCION QUE LLAMA A ASIGNA EVENTO-----------------------------------//
 function init()
 {	
+	$('#btn-select').click(validarCiudades);
  	var origenList = $('#origen');
  	var destinoList = $('#destino');
     var ciudad = $.parseJSON(ciudades);
@@ -28,7 +29,7 @@ function init()
   	
   });
 
-   asignaEventoClickOrigen();
+   //asignaEventoClickOrigen();
   	
 }
 function asignaEventoClickOrigen()
@@ -65,9 +66,31 @@ function onLinkClickDestino(evt)
 
 }
 /***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
-function validarCiuddades()
+function validarCiudades()
 {
-	var dirInput=$('#pac-input').val();
+	
+
+	    //Se verifica si la opcion del select esta vacia
+	    if ($('#origen').val().trim() != '') 
+	    {
+	        swal({
+		    title: "¡Debes de seleccionar una ciudad!",
+		    text: "Vehiculo destino: " ,
+		    imageUrl: "src/img/bads.png"
+			});
+	    } 
+	    else {
+	        swal({
+		    title: "¡Se selecciono exitosamente!",
+		    text: "Vehiculo destino: ",
+		    imageUrl: "src/img/goods.png"
+			});
+	    }
+
+}
+ 
+
+	/*var dirInput=$('#pac-input').val();
 	if(dirInput.length>0 && select)
 	{
 		swal({
@@ -100,5 +123,5 @@ function validarCiuddades()
 			});	
 		}
 	}
+	*/
 
-}
