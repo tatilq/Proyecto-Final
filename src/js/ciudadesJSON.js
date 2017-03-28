@@ -15,14 +15,14 @@ function init()
     var ciudad = $.parseJSON(ciudades);
    $.each(ciudad, function() 
    {
-      	var html= '<option class="opcionOrigen">'+this['nombre']+ ' <span class="distanciaO">'+this['distance']+'</span></option>';
+      	var html= '<option class==".distanciaO" value='+ this['distance']+'>'+this['nombre']+'</option>';
 
     origenList.append(html);
   	
   });
    $.each(ciudad, function() 
    {
-      	var html= '<option class="opcionDestino">'+this['nombre']+'  <span class="distanciaD">'+this['distance']+'</span></option>';
+      	var html= '<option class==".distanciaD" value='+ this['distance']+'>'+this['nombre']+'</option>';
 
     destinoList.append(html);
   	
@@ -45,8 +45,8 @@ function asignaEventoClickOrigen()
 function onLinkClickOrigen(evt)
 {
 	/*var srcCar= $(evt.currentTarget).find('.logo').attr('src');*/
-	var origenDistancia= $(this).text();
-	localStorage.setItem('origenKm',origenDistancia);
+	var origenDistancia= $(evt.currentTarget).val();
+	//localStorage.setItem('origenKm',origenDistancia);
 	console.log(origenDistancia);
 
 }
@@ -65,7 +65,7 @@ function onLinkClickDestino(evt)
 
 }
 /***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
-function setPickup()
+function validarCiuddades()
 {
 	var dirInput=$('#pac-input').val();
 	if(dirInput.length>0 && select)

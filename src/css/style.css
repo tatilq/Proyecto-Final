@@ -1,11 +1,18 @@
-* {
+.form-group {
+  padding: 10px;
+  background-color: white;
   outline: 1px solid red; }
+
+#btn-select {
+  background-color: #ff8e48;
+  width: 100%; }
 
 #logo {
   width: 80%; }
 
 #exclama {
-  color: #ff8e48; }
+  color: #ff8e48;
+  font-size: 80px; }
 
 .vehiculo {
   width: 50px;
@@ -13,5 +20,29 @@
 
 .distancia {
   display: none; }
+
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  clear: both; }
+
+header {
+  background-color: white;
+  outline: 1px solid  red; }
+
+#info .carro {
+  background-color: white; }
+
+#cant {
+  width: 70%; }
+
+#btn-compartir {
+  border: none;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #ff8e48;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

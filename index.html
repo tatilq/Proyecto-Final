@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--***************ESTA ES LA PARTE DEL HEADER**********************-->
-	<header>
+	<header class="navbar navbar-inverse navbar-fixed-top">
 	    <div class="container-fluid degradado">
 	        <div class="row menu">
 	            <div class="col-xs-6 col-sm-6 col-md-6 logo text-center">
@@ -23,7 +23,8 @@
 	            </div>
 	        </div>
 		</div>
-	</header>
+	</header><!--END NAV SECTION -->
+
 
 	<!--END NAV SECTION -->
 	<div id="home-sec">   
@@ -41,32 +42,27 @@
 							<option >Seleccione</option>
 							<!--AQUI SE ENLISTAN LOS DESTINOS FINALES-->
 						</select>
-						<button class="btn btn_menu">Buscar</button>
+						<br>
+						<button class="btn" id="btn-select">Buscar</button>
 					</div>					
 				</div>		
 			</div>
 		</div>
 	</div><!--END HOME SECTION-->  
 	<section id="info">
-		<div class="container" id="list_carros">
-			<!--AQUI SE ENLISTAN LOS CARROS-->		
-		</div>
-		<div class="container" >
+		<div class="container" id="">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="col-md-8 text-center">
-						<p>Cantidad de Pasajeros</p>
-					</div>
-					<div class="col-md-4 text-center">
-						<input type="" name="" class="form-control">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-				<button>Compartir Ahora</button>
-				</div>
-			</div>	
+					<div class="form-group">
+						<ul class="list-unstyled" id="list_carros">
+							<!--AQUI SE ENLISTAN LOS DESTINOS DE ORIGEN-->
+						</ul>
+						<button class="btn" id="btn-select">Buscar</button>
+						<br>
+						<span>Cantidad de Pasajeros</span><input type="" name="" >
+					</div>					
+				</div>		
+			</div>		
 		</div>
 	</section><!--END ABOUT SECTION-->
 
@@ -75,15 +71,13 @@
 		<div class="container">
 		</div>
 	</section><!--END PROJECT SECTION-->
-	<div id="footer">
-		2014 www.yourdomain.com | All Right Reserved  
-	</div><!-- END FOOTER SECTION -->
-
+	
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="src/js/vehiculosJSON.js"></script>
 	<script src="src/js/ciudadesJSON.js"></script>
+	  
 <!--<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>-->
 </body>
 </html>

@@ -13,20 +13,9 @@ function init()
     var carros = $.parseJSON(cars);
    $.each(carros, function() 
    {
-      	var html= '<div class="row">'+
-				'<div class="col-md-4">'+
-					'<div class="col-md-4 text-center">'+
-						'<input type="radio" name="gender" value="male">'+
-					'</div>'+
-					'<div class="col-md-4 text-center">'+
-						'<img src='+this['image']+' class="vehiculo">'+
-					'</div>'+
-					'<div class="col-md-4 text-center">'+
-						'<p>'+this['nombre']+'</p>'+
-						'<small>Maximo '+this['max']+' pasajeros</small>'+
-					'</div>'+							
-				'</div>'+
-			'</div>';
+      	var html= '<li><input type="radio" name="gender" value="male" checked>'+
+      		'<img src="src/img/auto.jpg" class="vehiculo" ><small>'+this['nombre']+'</small></li>';
+
     carList.append(html);
   	
   });
