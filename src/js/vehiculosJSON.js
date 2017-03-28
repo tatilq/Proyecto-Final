@@ -27,10 +27,20 @@ function init()
 function onLinkClick()
 {
 	var consumo= $(this).find('.litros').text();
+	var ruta= $(this).find('.vehiculo').attr('src');
 	var pasajero=$(this).find('.pasajero').text();
 	localStorage.setItem('consumo',consumo);
 	localStorage.setItem('pasajero',pasajero);
-	
+	localStorage.setItem('ruta',ruta);
+
+	if ($('#origen').val() != '' && $('#destino').val() != '') 
+    {
+    	swal({
+	    title: "¡Se selecciono exitosamente!",
+	    imageUrl: "src/img/goods.png"
+		});
+       $('#info').show();
+    } 
 }
 
    

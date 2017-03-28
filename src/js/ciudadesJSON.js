@@ -35,14 +35,14 @@ function init()
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
 function onClickOrigen()
 {
-	var litrosDestino= $(this).val();
-	localStorage.setItem('origen',litrosDestino);
+	var kmOrigen= $(this).val();
+	localStorage.setItem('kmOrigen',kmOrigen);
 }
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/
 function onClickDestino()
 {
-	var litrosDestino= $(this).val();
-	localStorage.setItem('litrosDestino',litrosDestino);
+	var kmDestino= $(this).val();
+	localStorage.setItem('kmDestino',kmDestino);
 }
 /***************************FUNCION QUE VALIDA QUE SELCCIONES UN CARRO Y UN DESTINO*******************/
 function validarCiudades()
@@ -66,28 +66,20 @@ function validarCiudades()
 
 }
  
- function validarEnviar()
+function validarEnviar()
  {
  	var kmLitros=localStorage.getItem('consumo');
- 	var litrosDestino=localStorage.getItem('litrosDestino');
- 	var origen=localStorage.getItem('origen');
- 	console.log(kmLitros);
- 	console.log(litrosDestino);
- 	console.log(origen);
- }
-
-    /*if ($('#origen').val() != '' && $('#destino').val() != '') 
-    {
-    	swal({
-	    title: "¡Se selecciono exitosamente!",
-	    imageUrl: "src/img/goods.png"
-		});
-       $('#info').show();
-    } 
-    else {
+ 	var kmDestino=localStorage.getItem('kmDestino');
+ 	var kmOrigen=localStorage.getItem('kmOrigen');
+ 	var pasajero=localStorage.getItem('pasajero');
+ 	var ruta=localStorage.getItem('ruta');
+ 
+ 	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));
+	
     	 swal({
-	    title: "¡Debes de seleccionar una ciudad!",
-	    imageUrl: "src/img/bads.png"
+	    title: "¡El costo es ! "+costo,
+	    imageUrl: ruta
 		});
-    }*/
+   
+   
  }
