@@ -3,22 +3,82 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Examen Herramientas Productividad</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	<title>Proyecto final</title>
 	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
+<!--***************ESTA ES LA PARTE DEL HEADER**********************-->
+	<header>
+	    <div class="container-fluid degradado">
+	        <div class="row menu">
+	            <div class="col-xs-6 col-sm-6 col-md-6 logo text-center">
+	                <img src="src/img/logo-gris.jpg" id="logo">
+	            </div>
+	            <div class="col-xs-6 col-sm-6 col-md-6 text-center">
+	                <i class="fa fa-exclamation-circle" aria-hidden="true" id="exclama"></i>
+	            </div>
+	        </div>
 		</div>
-	</div><!--END NAV SECTION -->
+	</header>
+
+	<!--END NAV SECTION -->
 	<div id="home-sec">   
 		<div class="container"  >
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="dia">ORIGEN</label>
+						<select class="form-control" id="hora">
+							<option value="0">Seleccione</option>
+							<option value="1">iquique</option>
+							<option value="2">antofagasta</option>
+							<option value="3">copiapo</option>
+							<option value="4">4:00 AM</option>
+							<option value="5">5:00 AM</option>
+						</select>
+						<label for="dia">DESTINO</label>
+						<select class="form-control" id="hora">
+							<option value="0">Seleccione</option>
+							<option value="1">1:00 AM</option>
+							<option value="2">2:00 AM</option>
+							<option value="3">3:00 AM</option>
+							<option value="4">4:00 AM</option>
+							<option value="5">5:00 AM</option>
+						</select>
+						<button class="btn btn_menu">Buscar</button>
+					</div>					
+				</div>		
+			</div>
 		</div>
 	</div><!--END HOME SECTION-->  
-	<section id="info"  >
-		<div class="container">
+	<section id="info">
+		<div class="container" id="list_carros">
+			<!--AQUI SE ENLISTAN LOS CARROS-->		
+		</div>
+		<div class="container" >
+			<div class="row">
+				<div class="col-md-4">
+					<div class="col-md-8 text-center">
+						<p>Cantidad de Pasajeros</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<input type="" name="" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+				<button>Compartir Ahora</button>
+				</div>
+			</div>	
 		</div>
 	</section><!--END ABOUT SECTION-->
+
+
 	<section id="calculator" >
 		<div class="container">
 		</div>
@@ -26,5 +86,12 @@
 	<div id="footer">
 		2014 www.yourdomain.com | All Right Reserved  
 	</div><!-- END FOOTER SECTION -->
+
+<!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="src/js/vehiculosJSON.js"></script>
+	<script src="src/js/auto.js"></script>
+<!--<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>-->
 </body>
 </html>
