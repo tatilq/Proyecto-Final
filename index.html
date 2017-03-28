@@ -11,21 +11,26 @@
 	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
+<div class="container-fluid">
+	<div class="row">
+		<div id="map"></div>
+	</div>
+</div>
 <!--***************ESTA ES LA PARTE DEL HEADER**********************-->
-	<header class="navbar navbar-inverse navbar-fixed-top">
+	<header class="">
 	    <div class="container-fluid degradado">
 	        <div class="row menu">
-	            <div class="col-xs-6 col-sm-6 col-md-6 logo text-center">
+	            <div class="col-xs-7 col-sm-7 col-md-4 logo text-center">
 	                <img src="src/img/logo-gris.jpg" id="logo">
 	            </div>
-	            <div class="col-xs-6 col-sm-6 col-md-6 text-center">
+	            <div class="col-xs-5 col-sm-5 col-md-8 text-center">
 	                <i class="fa fa-exclamation-circle" aria-hidden="true" id="exclama"></i>
 	            </div>
 	        </div>
 		</div>
 	</header><!--END NAV SECTION -->
 
-
+<div class="container-fluid" class="cuerpo">
 	<!--END NAV SECTION -->
 	<div id="home-sec">   
 		<div class="container"  >
@@ -57,9 +62,9 @@
 						<ul class="list-unstyled" id="list_carros">
 							<!--AQUI SE ENLISTAN LOS DESTINOS DE ORIGEN-->
 						</ul>
-						<button class="btn" id="btn-select">Buscar</button>
 						<br>
 						<span>Cantidad de Pasajeros</span><input type="" name="" >
+						<button class="btn" id="btn-select">Buscar</button>
 					</div>					
 				</div>		
 			</div>		
@@ -71,13 +76,17 @@
 		<div class="container">
 		</div>
 	</section><!--END PROJECT SECTION-->
+</div>
 	
 <!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="src/js/vehiculosJSON.js"></script>
 	<script src="src/js/ciudadesJSON.js"></script>
-	  
+	<script src="src/js/map_1.js"></script>
+	  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsHYpb6oqAaOGuzLra1-3c63wphzpth60&callback=initMap">
+    </script>
 <!--<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>-->
 </body>
 </html>

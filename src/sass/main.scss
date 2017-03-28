@@ -1,12 +1,16 @@
 $total:100%;
 $cien:100px;
 $colorIcono:rgb(255,142,72);
-
+.cuerpo
+{
+	outline:1px solid red;
+	position:relative;
+}
 .form-group
 {
 	padding:10px;
 	background-color:white;
-	outline:1px solid red;
+	
 }
 #btn-select
 {

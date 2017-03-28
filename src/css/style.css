@@ -1,7 +1,10 @@
+.cuerpo {
+  outline: 1px solid red;
+  position: relative; }
+
 .form-group {
   padding: 10px;
-  background-color: white;
-  outline: 1px solid red; }
+  background-color: white; }
 
 #btn-select {
   background-color: #ff8e48;
