@@ -71,19 +71,18 @@ function validarCiudades()
 	
 
 	    //Se verifica si la opcion del select esta vacia
-	    if ($('#origen').val().trim() != '') 
+	    if ($('#origen').val() != '' && $('#destino').val() != '') 
 	    {
-	        swal({
-		    title: "¡Debes de seleccionar una ciudad!",
-		    text: "Vehiculo destino: " ,
-		    imageUrl: "src/img/bads.png"
+	    	swal({
+		    title: "¡Se selecciono exitosamente!",
+		    imageUrl: "src/img/goods.png"
 			});
+	       
 	    } 
 	    else {
-	        swal({
-		    title: "¡Se selecciono exitosamente!",
-		    text: "Vehiculo destino: ",
-		    imageUrl: "src/img/goods.png"
+	    	 swal({
+		    title: "¡Debes de seleccionar una ciudad!",
+		    imageUrl: "src/img/bads.png"
 			});
 	    }
 
@@ -104,24 +103,4 @@ function validarCiudades()
 	        } 
 		});
 	}
-	else
-	{
-		if(!select)
-		{
-			swal({
-			  title: "¡Por favor, selecciona un vehículo!",
-			  text: "No seleccionaste ningun vehiculo",
-			  imageUrl: "img/bads.png"
-			});
-		}
-		else
-		{
-			swal({ 
-		  		title: "¡Por favor, selecciona un Destino!",
-		  		text: "No seleccionaste ningun destino",
-		  		imageUrl: "img/bads.png"
-			});	
-		}
-	}
 	*/
-
