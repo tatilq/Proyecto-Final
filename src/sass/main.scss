@@ -1,6 +1,5 @@
-* { 
-}
-$color-principal: #fcc574;
+
+$color-principal: rgb(252,197,116);
 
 #map 
 {
@@ -31,7 +30,7 @@ $color-principal: #fcc574;
 #navSection .tooltip-inner 
 {
   position: absolute;
-  top: 20px;
+  top: 30px;
   width: 2200px;
   right: -15px;
   background: #fff;
