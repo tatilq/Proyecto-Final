@@ -1,90 +1,96 @@
-$total:100%;
-$cien:100px;
-$color:rgb(255,142,72);
-$blanco:rgb(255,255,255);
-/******ESTILOS CUERPO****/
-.cuerpo
-{
-	position:relative;
+* { 
 }
-/******CLASES GENERALES****/
-.form-group
-{
-	padding:10px;
-	background-color:$blanco;
-}
-.boton
-{
-	background-color: $color;
-	width:100%;
-}
-#btn-select
-{
-	@extend .boton;
-}
-#btn-enviar
-{
-	@extend .boton;
-}
-#logo
-{
-	width:$total - 20%;
-}
-#exclama
-{
-	color:$color;
-	font-size:70px;
-	margin :0 auto;
-}
-/******SECCION VEHICULO****/
-.vehiculo
-{
-	width:$cien / 2;
-	height:$cien / 2;
-}
-.distancia
-{
-	display:none;
-}
-/******SECCION MAPA****/
-#map
-{
-	height: $total;
-	width: $total;
-	position: absolute;
-	top:$total / 10;
-}
-/******SECCION INFORMAION****/
-#info .carro{
-	
-	background-color:$blanco;
+$color-principal: #fcc574;
 
-}
-#cant
+#map 
 {
-	width:70%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 8%;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat; 
 }
-#btn-compartir
+#navSection 
 {
-	border:none;
-	height:30px;
-	border-radius:3px;
-	background-color:$color;
-	width:100%;
-
+  background: #fff;
+  border: none; 
 }
-.informacion
+#navSection img 
 {
-	padding:10px;
-	background-color:$blanco;
+  width: 200px;
+  padding: 8px 0; }
+#navSection a 
+{
+  font-size: 30px;
+  float: right;
+  color: #ffc56e;
+  top: 12px; 
+} 
+#navSection a:hover 
+{
+  text-decoration: none; 
 }
-.informacion  h4
+#navSection .tooltip-inner 
 {
-	color:$color;
+  position: absolute;
+  top: 15px;
+  width: 200px;
+  right: -15px;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 15px;
+  font-size: 15px; 
 }
 
-#tooltip
+.selects
 {
-	float: right;
-	
+  margin-top: 50px;
+  position: absolute;
+  z-index: 1000;
+  
+  padding: 3%;
+}
+#buscar,#compartir
+{
+  margin-top: 15px;
+  background-color: $color-principal;
+  border-color: $color-principal;
+  width: 100%;
+}
+select
+{
+  border-color: $color-principal;
+  width: 80%;
+ 
+}
+.labels
+{
+  background-color: white;
+  padding: 10px;
+}
+#list_carros
+{
+  list-style: none;
+  padding-top: 30px;
+  padding: 15px;
+  background-color: white;
+  margin-top: 15px;
+}
+#list_carros i
+{
+  margin-top: 100%;
+}
+.precioCa p
+{
+  margin-top: 7px;
+}
+.vehiculos 
+{
+  background-color: white;
+  z-index: 2;
+  margin-top: -10px;
+  padding:5px;
 }

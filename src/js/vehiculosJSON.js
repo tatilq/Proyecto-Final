@@ -13,14 +13,22 @@ function init()
     var carros = $.parseJSON(cars);
    $.each(carros, function() 
    {
-      	var html= '<li class="lis"><input type="radio" name="gender" class="radio" value="male" checked>'+
-      		'<img src='+this['image']+' class="vehiculo" ><small>'+this['nombre']+'</small><span> Maximo </span><span class="pasajero">'+this['max']+'</span> '+
-      		'<span class="litros" style="display:none;">'+this['consumo']+'</span></li>';
-
-    carList.append(html);
+      	var html =  '<li class="row">'+
+		   		 		'<div class="radio col-xs-1 text-center">'+
+		   		 			'<label><input id="radio2" type="radio" name="optradio" value="2"></label>'+
+		   		 		'</div>'+
+		   		 		'<div class="col-xs-2"><img src='+ this['image']+' alt="" class="img-responsive"></div>'+
+		   		 			'<div class="col-xs-6"><strong>'+this['nombre']+'</strong> <br> <p style="font-size: 10px" ><span>Máximo </span>5 <span> pasajeros</span></p>'+
+		   		 			'</div>'+
+		   		 		'<div class="precioCa col-xs-2 text-center">'+
+		   		 			'<p id="precioAu">$0 <p>'+
+		   		 		'</div>'+
+			   		'</li>';
+    	carList.append(html);
   	
   });
-		$('.lis').on('click',onLinkClick);
+
+	$('.lis').on('click',onLinkClick);
 
 }
 /*******************FUNCION QUE GUARDA DATOS LOCALEMNTE CON UN CLICK*******************/

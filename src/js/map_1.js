@@ -43,9 +43,10 @@ function mapa(position)
     position: new google.maps.LatLng(latitud,longitud),
     map: map,
     title:"¡ Aqui estoy !",
-    icon: "img/persona.png"
+    icon: ""
       });
 
   geocodeLatLng(geocoder, currentMarker.position,'dirActual');
 };
 /**************************************************FIN*****************************************/
+

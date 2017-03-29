@@ -1,16 +1,16 @@
 
-var ciudades = '[{"nombre": "arica","distance":"2059"},{"nombre": "iquique","distance":"1789"},{"nombre": "antofagasta","distance":"1368"},'+
-				'{"nombre": "copiapo","distance":"1567"},{"nombre": "La serena","distance":"470"},{"nombre": "Valparaiso","distance":"116"},'+
-				'{"nombre": "rancagua","distance":"84"},{"nombre": "talca","distance":"257"},{"nombre": "santiago","distance":"0"},'+
-				'{"nombre": "coyhaique","distance":"1888"},{"nombre": "Punta Arenas","distance":"848"},{"nombre": "concepcion","distance":"500"},'+
-				'{"nombre": "temuco","distance":"690"},{"nombre": "valdivia","distance":"848"},{"nombre": "Puerto Montt","distance":"1032"}]';
+var ciudades = '[{"nombre": "Arica","distance":"2059"},{"nombre": "Iquique","distance":"1789"},{"nombre": "Antofagasta","distance":"1368"},'+
+				'{"nombre": "Copiapo","distance":"1567"},{"nombre": "La serena","distance":"470"},{"nombre": "Valparaiso","distance":"116"},'+
+				'{"nombre": "Rancagua","distance":"84"},{"nombre": "Talca","distance":"257"},{"nombre": "Santiago","distance":"0"},'+
+				'{"nombre": "Coyhaique","distance":"1888"},{"nombre": "Punta Arenas","distance":"848"},{"nombre": "Concepcion","distance":"500"},'+
+				'{"nombre": "Temuco","distance":"690"},{"nombre": "Valdivia","distance":"848"},{"nombre": "Puerto Montt","distance":"1032"}]';
 
 /**********************************FUNCION QUE SE EJECUTA CUANDO TERMINE DE CARGAR EL DOCUMENTO***********/
 $(document).ready(init);
 //--------------------------------------FUNCION QUE LLAMA A ASIGNA EVENTO-----------------------------------//
 function init()
 {	
-	$('#btn-select').click(validarCiudades);
+	$('#buscar').click(validarCiudades);
 	$('#btn-enviar').click(validarEnviar);
 	
 	$('#info').hide();
