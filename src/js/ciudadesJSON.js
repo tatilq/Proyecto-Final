@@ -11,7 +11,7 @@ $(document).ready(init);
 function init()
 {	
 	$('#buscar').click(validarCiudades);
-	$('#btn-enviar').click(validarEnviar);
+	$('#compartir').click(validarEnviar);
 	$('.vehiculos').hide();
 
  	var origenList = $('#origen');
@@ -68,19 +68,42 @@ function validarCiudades()
  
 function validarEnviar()
  {
+ 	var costoLitro=673;
+
  	var kmLitros=localStorage.getItem('consumo');
  	var kmDestino=localStorage.getItem('kmDestino');
  	var kmOrigen=localStorage.getItem('kmOrigen');
- 	var pasajero=localStorage.getItem('pasajero');
+ 	var Maxpasajero=localStorage.getItem('pasajero');
  	var ruta=localStorage.getItem('ruta');
- 
- 	var costo=(-1*((((kmDestino-kmOrigen)*kmLitros))/pasajero));
+    var valor= $('#cantidad-pasajero').val();
+  
+  	var distanciaTOTAL=parseInt(kmDestino)+parseInt(kmOrigen);
+  	var precio= distanciaTOTAL / parseInt(kmLitros);
+  	var total = precio / costoLitro;
 
- 	swal({
-	    title: "¡El costo es ! "+costo,
-	    imageUrl: ruta
+    if(valor=="")
+    {
+        swal({
+	    title: "¡Debes de seleccionar vehiculo!",
+	    imageUrl: "src/img/bads.png"
 		});
-   
-   
- }
+    }
+    if(valor!="")
+    {
+	    if(valor>parseInt(localStorage.getItem('pasajero')))
+	    {
+	        sweetAlert("Oops...", "Ingresa un valor Valido", "error");
+	    }
+	    if(valor <= parseInt(localStorage.getItem('pasajero')) || valor == parseInt(localStorage.getItem('pasajero')))
+	    {
+	    	var final= (total/valor);
 
+	    	var flag=final.toFixed(2)
+	    	swal({
+		    title: "Costo por Persona: $"+flag +" CLP",
+		    imageUrl: ruta
+			});
+	    }
+	  }
+
+ }

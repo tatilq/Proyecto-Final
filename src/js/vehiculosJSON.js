@@ -13,15 +13,16 @@ function init()
     var carros = $.parseJSON(cars);
    $.each(carros, function() 
    {
-      	var html =  '<li class="row">'+
+      	var html =  '<li class="row lis">'+
 		   		 		'<div class="radio col-xs-1 text-center">'+
 		   		 			'<label><input id="radio2" type="radio" name="optradio" value="2"></label>'+
 		   		 		'</div>'+
-		   		 		'<div class="col-xs-2"><img src='+ this['image']+' alt="" class="img-responsive"></div>'+
-		   		 			'<div class="col-xs-6"><strong>'+this['nombre']+'</strong> <br> <p style="font-size: 10px" ><span>Máximo </span>'+this['max']+'<span> pasajeros</span></p>'+
+		   		 		'<div class="col-xs-2"><img src='+ this['image']+' alt="" class="img-responsive car "></div>'+
+		   		 			'<div class="col-xs-6"><strong>'+this['nombre']+'</strong> <br> <span>Máximo </span><span style="font-size: 10px" class="pasajero">'+this['max']+'</span><span> pasajeros</span>'+
+		   		 			'<span style="display:none;" class="litros">'+this['consumo']+'</span>'+
 		   		 			'</div>'+
 		   		 		'<div class="precioCa col-xs-2 text-center">'+
-		   		 			'<p id="precioAu">$0 <p>'+
+		   		 			'<p id="precioTotal">$<p>'+
 		   		 		'</div>'+
 			   		'</li>';
     	carList.append(html);
@@ -35,20 +36,12 @@ function init()
 function onLinkClick()
 {
 	var consumo= $(this).find('.litros').text();
-	var ruta= $(this).find('.vehiculo').attr('src');
+	var ruta= $(this).find('.car').attr('src');
 	var pasajero=$(this).find('.pasajero').text();
 	localStorage.setItem('consumo',consumo);
 	localStorage.setItem('pasajero',pasajero);
 	localStorage.setItem('ruta',ruta);
 
-	if ($('#origen').val() != '' && $('#destino').val() != '') 
-    {
-    	swal({
-	    title: "¡Se selecciono exitosamente!",
-	    imageUrl: "src/img/goods.png"
-		});
-       $('#info').show();
-    } 
 }
 
    

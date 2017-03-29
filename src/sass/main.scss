@@ -19,7 +19,7 @@ $color-principal: #fcc574;
 }
 #navSection img 
 {
-  width: 200px;
+  width: 250px;
   padding: 8px 0; }
 #navSection a 
 {
@@ -28,26 +28,26 @@ $color-principal: #fcc574;
   color: #ffc56e;
   top: 12px; 
 } 
-#navSection a:hover 
-{
-  text-decoration: none; 
-}
 #navSection .tooltip-inner 
 {
   position: absolute;
-  top: 15px;
-  width: 200px;
+  top: 20px;
+  width: 2200px;
   right: -15px;
   background: #fff;
-  color: #000;
   border: none;
+  color: #000;
   padding: 15px;
   font-size: 15px; 
 }
 
+#navSection a:hover 
+{
+  text-decoration: none; 
+}
 .selects
 {
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100%;
   position: absolute;
   z-index: 1000;
@@ -56,8 +56,8 @@ $color-principal: #fcc574;
 #buscar,#compartir
 {
   margin-top: 15px;
-  background-color: $color-principal;
   border-color: $color-principal;
+  background-color: $color-principal;
   width: 100%;
 }
 select
@@ -80,4 +80,8 @@ select
   z-index: 2;
   margin-top: -10px;
   padding:5px;
+}
+.compartir{
+  width: 20px;
+  height: 20px;
 }
