@@ -12,19 +12,19 @@ function init()
 {	
 	$('#buscar').click(validarCiudades);
 	$('#btn-enviar').click(validarEnviar);
-	
-	$('#info').hide();
+	$('.vehiculos').hide();
+
  	var origenList = $('#origen');
  	var destinoList = $('#destino');
     var ciudad = $.parseJSON(ciudades);
    $.each(ciudad, function() 
    {
-      	var html= '<option class=".origenes" value='+ this['distance']+'>'+this['nombre']+'</option>';
+      	var html= '<option  value='+ this['distance']+'>'+this['nombre']+'</option>';
     	origenList.append(html);
    });
    $.each(ciudad, function() 
    {
-      	var html= '<option class=".destinos" value='+ this['distance']+'>'+this['nombre']+'</option>';
+      	var html= '<option value='+ this['distance']+'>'+this['nombre']+'</option>';
 		destinoList.append(html);	
    });
 
@@ -55,7 +55,7 @@ function validarCiudades()
 	    title: "¡Se selecciono exitosamente!",
 	    imageUrl: "src/img/goods.png"
 		});
-       $('#info').show();
+        $('.vehiculos').show();
     } 
     else {
     	 swal({

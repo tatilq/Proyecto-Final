@@ -18,7 +18,7 @@ function init()
 		   		 			'<label><input id="radio2" type="radio" name="optradio" value="2"></label>'+
 		   		 		'</div>'+
 		   		 		'<div class="col-xs-2"><img src='+ this['image']+' alt="" class="img-responsive"></div>'+
-		   		 			'<div class="col-xs-6"><strong>'+this['nombre']+'</strong> <br> <p style="font-size: 10px" ><span>Máximo </span>5 <span> pasajeros</span></p>'+
+		   		 			'<div class="col-xs-6"><strong>'+this['nombre']+'</strong> <br> <p style="font-size: 10px" ><span>Máximo </span>'+this['max']+'<span> pasajeros</span></p>'+
 		   		 			'</div>'+
 		   		 		'<div class="precioCa col-xs-2 text-center">'+
 		   		 			'<p id="precioAu">$0 <p>'+

@@ -36,10 +36,11 @@
   font-size: 15px; }
 
 .selects {
-  margin-top: 50px;
+  margin-top: 100px;
+  width: 100%;
   position: absolute;
   z-index: 1000;
-  padding: 3%; }
+  padding: 4%; }
 
 #buscar, #compartir {
   margin-top: 15px;
@@ -54,16 +55,6 @@ select {
 .labels {
   background-color: white;
   padding: 10px; }
-
-#list_carros {
-  list-style: none;
-  padding-top: 30px;
-  padding: 15px;
-  background-color: white;
-  margin-top: 15px; }
-
-#list_carros i {
-  margin-top: 100%; }
 
 .precioCa p {
   margin-top: 7px; }

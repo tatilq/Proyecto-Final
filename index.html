@@ -33,29 +33,30 @@
 	        		<div class="labels">
 	        			<label class="control-label">O R I G E N</label><br>
 	          			<select id="origen" class="" >
-	          				<option>Seleccione</option>
+	          				<option value="">Seleccione</option>
 	          				<!---AQUI SE DEBEN DE GENERAR DINAMICAMENTE-->
 						</select>
 						<br><br>
 						<label class="control-label">D E S T I N O</label><br>
 	          			<select id="destino" class="">
-	          				<option>Seleccione</option>
+	          				<option value="">Seleccione</option>
 	          				<!--AQUI SE DEBEN DE GENERAR DINAMICAMNETE-->
 						</select>
 						<br>
+						<button type="submit" class="btn btn-success" id="buscar" >Buscar</button>
 					</div>
-         			<button type="submit" class="btn btn-success" id="buscar" >Buscar</button>
+         			<br>
 					<!--LA SEGUNDA VISTA EL TIPO DE VEHICULO -->
-			  		<ul class="" id="list_carros">
-			  			<h4>VEHICULO</h4>
-			  			<h5>seleccione</h5>
-			   		 	
-			  	
-			  		</ul>
-			  		<ul class="vehiculos" >
-			  			<h5>Cantidad de pasajeros</h5><input id="cantPasajeros" type="text" name="cantidad">
-			  		</ul>
-					<button type="submit" class="btn btn-success" id="compartir">Compartir carro</button>
+				  		<ul class=" carro vehiculos list-unstyled" id="list_carros">
+				  			<h4>VEHICULO</h4>
+				  			<h5>seleccione</h5>
+				   		 	
+				  			<!--AQUI SE ENLISTAN LOS VEHICULOS-->
+				  		</ul>
+				  		<ul class="carro vehiculos" >
+				  			<h5>Cantidad de pasajeros</h5><input type="text" name="cantidad">
+				  			<button type="submit" class="btn btn-success" id="compartir" class="carro">Compartir carro</button>
+				  		</ul>
 				</div>
 			</div>
 		</div> 
