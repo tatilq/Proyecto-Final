@@ -5,73 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome">
-	<link rel="stylesheet" href="src/sweetAlert/sweetalert.css">
-	<script src="src/sweetAlert/sweetalert.min.js" type="text/javascript" ></script> 
+	<link rel="stylesheet" href="sweetAlert/sweetalert.css">
+	<script src="sweetAlert/sweetalert.min.js" type="text/javascript" ></script> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Proyecto final</title>
 	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
-	<!--AQUI ESTA EL MAPA-->
-	<div id="map">
-	</div>
-	<!--AQUI SE NELISTA EL NAV-->
-	<div class="navbar navbar-inverse navbar-fixed-top" id="navSection">
-		<div class="container">
-		<div class="row"> 
-				<div class="col-md-2 col-xs-4"><img src="src/img/logo-gris.jpg" alt=""></div>
-				<div class="col-md-offset-8 col-md-2 col-xs-4 pull-right">
-				 <a data-toggle="tooltip" data-placement="bottom" class="fa fa-info-circle icono"></a></div>
-			</div>
-		</div>
-	</div><!--END NAV SECTION -->
-	<div id="home-sec">   
-		<div class="container-fluid">
-			<div class="col-md-5 col-md-offset-1 col-xs-5">
- 				<div class="form-group selects">
-	        		<div class="labels">
-	        			<label class="control-label">O R I G E N</label><br>
-	          			<select id="origen" class="" >
-	          				<option value="">Seleccione</option>
-	          				<!---AQUI SE DEBEN DE GENERAR DINAMICAMENTE-->
-						</select>
-						<br><br>
-						<label class="control-label">D E S T I N O</label><br>
-	          			<select id="destino" class="">
-	          				<option value="">Seleccione</option>
-	          				<!--AQUI SE DEBEN DE GENERAR DINAMICAMNETE-->
-						</select>
-						<br>
-						<button type="submit" class="btn btn-success" id="buscar" >Buscar</button>
-					</div>
-         			<br>
-					<!--LA SEGUNDA VISTA EL TIPO DE VEHICULO -->
-				  		<ul class=" carro vehiculos list-unstyled" id="list_carros">
-				  			<h4>VEHICULO</h4>
-				  			<h5>seleccione</h5>
-				   		 	
-				  			<!--AQUI SE ENLISTAN LOS VEHICULOS-->
-				  		</ul>
-				  		<ul class="carro vehiculos" >
-				  			<h5>Cantidad de pasajeros</h5><input type="text" name="cantidad" id="cantidad-pasajero">
-				  			<button type="submit" class="btn btn-success" id="compartir" class="carro">Compartir carro</button>
-				  		</ul>
-				</div>
-			</div>
-		</div> 
-	</div>
-	
-	
-<!--*******************************PARTE DE LOS SCRIPTS DEL MAPA **************************************-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="src/js/vehiculosJSON.js"></script>
-	<script src="src/js/ciudadesJSON.js"></script>
-	<script src="src/js/map_1.js"></script>
-	<script src="src/js/custom.js"></script>
-	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsHYpb6oqAaOGuzLra1-3c63wphzpth60&callback=initMap">
-    </script>
+	<!--EL PROYECTO ESTA EN LA CARPETA DIST Y SRC-->
 </body>
 </html>

@@ -1,0 +1,72 @@
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 8%;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat; }
+
+#navSection {
+  background: #fff;
+  border: none; }
+
+#navSection img {
+  width: 250px;
+  padding: 8px 0; }
+
+#navSection a {
+  font-size: 30px;
+  float: right;
+  color: #ffc56e;
+  top: 12px; }
+
+#navSection .tooltip-inner {
+  position: absolute;
+  top: 30px;
+  width: 2200px;
+  right: -15px;
+  background: #fff;
+  border: none;
+  color: #000;
+  padding: 15px;
+  font-size: 15px; }
+
+#navSection a:hover {
+  text-decoration: none; }
+
+.selects {
+  margin-top: 80px;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  padding: 4%; }
+
+#buscar, #compartir {
+  margin-top: 15px;
+  border-color: #fcc574;
+  background-color: #fcc574;
+  width: 100%; }
+
+select {
+  border-color: #fcc574;
+  width: 80%; }
+
+.labels {
+  background-color: white;
+  padding: 10px; }
+
+.precioCa p {
+  margin-top: 7px; }
+
+.vehiculos {
+  background-color: white;
+  z-index: 2;
+  margin-top: -10px;
+  padding: 5px; }
+
+.compartir {
+  width: 20px;
+  height: 20px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -6,9 +6,8 @@ function initMap() {
 /*********************************************FUNCION SE EJECUTA DE HABER ERRORES EN EL MAPA***********************************/
 function error(errorC)
 {
-    alert('Error: '+errorC.code+' '+error.message+ '\n\Please prove if are connected '+
-  'or permit your location');
-    
+  alert('Error: '+errorC.code+' '+error.message+ '\n\Please prove if are connected '+
+  'or permit your location');  
 }
 
 /*********************************************FUNCION QUE CENTRA EL MAPA***********************************/
@@ -27,7 +26,7 @@ function mapa(position)
     position: new google.maps.LatLng(latitud,longitud),
     map: map,
     title:"¡ Aqui estoy !",
-    icon: ""
+    icon: "img/persona.png"
       });
 }
 /**************************************************FIN*****************************************/

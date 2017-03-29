@@ -55,14 +55,14 @@ function validarCiudades()
 	    {
 	    	swal({
 		    title: "¡Debes seleccionar ciudades diferentes!",
-		    imageUrl: "src/img/bads.png"
+		    imageUrl: "img/bads.png"
 			});
 	    }
 	    else
 	    {
 	    	swal({
 		    title: "¡Se selecciono exitosamente!",
-		    imageUrl: "src/img/goods.png"
+		    imageUrl: "img/goods.png"
 			});
 	        $('.vehiculos').show();
 	 	}
@@ -70,7 +70,7 @@ function validarCiudades()
    	else {
     	 swal({
 	    title: "¡Debes de seleccionar una ciudad!",
-	    imageUrl: "src/img/bads.png"
+	    imageUrl: "img/bads.png"
 		});
     }
  	
@@ -95,7 +95,7 @@ function validarEnviar()
     {
         swal({
 	    title: "¡Debes de seleccionar vehiculo!",
-	    imageUrl: "src/img/bads.png"
+	    imageUrl: "img/bads.png"
 		});
     }
     if(valor!="")
